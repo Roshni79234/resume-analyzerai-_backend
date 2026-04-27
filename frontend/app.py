@@ -2,7 +2,7 @@ import gradio as gr
 import requests
 import uuid
 
-BACKEND = "https://your-render-url.onrender.com"
+BACKEND = "https://resume-analyzerai-backend.onrender.com/"
 user_id = str(uuid.uuid4())
 
 def get_roles():

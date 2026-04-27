@@ -5,42 +5,58 @@ def generate_question(role, history):
     context = "\n".join(history)
 
     prompt = f"""
-You are a professional interviewer for the role of {role}.
+You are an interviewer for {role}.
 
-Conversation so far:
+Conversation:
 {context}
 
-Ask the next interview question. Do NOT repeat.
+Ask ONE clear interview question.
 """
 
     res = query_llm(prompt)
 
-    try:
-        return res[0]["generated_text"]
-    except:
-        return "Tell me about yourself."
+    # Handle different formats
+    if isinstance(res, str):
+        return res
 
+    if isinstance(res, list):
+        return res[0].get("generated_text", "No question generated")
+
+    if isinstance(res, dict):
+        if "generated_text" in res:
+            return res["generated_text"]
+        if "error" in res:
+            return f"Model error: {res['error']}"
+
+    return "Could not generate question"
 
 def evaluate_answer(question, answer, role):
     prompt = f"""
 Evaluate this answer.
 
-Role: {role}
 Question: {question}
 Answer: {answer}
 
-Return:
+Give:
 Score: X/10
 Feedback: short feedback
 """
 
     res = query_llm(prompt)
 
-    try:
-        return res[0]["generated_text"]
-    except:
-        return "Score: 5/10\nFeedback: Could not evaluate."
+    if isinstance(res, str):
+        return res
 
+    if isinstance(res, list):
+        return res[0].get("generated_text", "No evaluation")
+
+    if isinstance(res, dict):
+        if "generated_text" in res:
+            return res["generated_text"]
+        if "error" in res:
+            return f"Model error: {res['error']}"
+
+    return "Evaluation failed"
 
 def start_session(duration):
     return {

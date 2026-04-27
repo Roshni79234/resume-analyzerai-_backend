@@ -8,7 +8,9 @@ def query_llm(prompt):
 
     response = requests.post(API_URL, headers=HEADERS, json=payload)
 
-    try:
-        return response.json()
-    except:
-        return [{"generated_text": "Error generating response"}]
+    data = response.json()
+
+    
+    print("HF RESPONSE:", data)
+
+    return data
