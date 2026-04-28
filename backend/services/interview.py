@@ -8,29 +8,52 @@ def generate_question(role, history):
     prompt = f"""
 You are an interviewer for {role}.
 
-Conversation so far:
+Conversation:
 {context}
 
 Ask ONE clear interview question.
 """
 
-    return query_llm(prompt)
+    res = query_llm(prompt)
+
+    # ✅ HANDLE STRING
+    if isinstance(res, str):
+        return res
+
+    # ✅ HANDLE GROQ FORMAT
+    if isinstance(res, dict):
+        try:
+            return res["choices"][0]["message"]["content"]
+        except:
+            return str(res)
+
+    return "Could not generate question"
 
 
 def evaluate_answer(question, answer, role):
     prompt = f"""
-You are an expert interviewer.
+Evaluate this answer.
 
 Question: {question}
 Answer: {answer}
-Role: {role}
 
 Give:
-Score out of 10
-Short feedback
+Score: X/10
+Feedback: short feedback
 """
 
-    return query_llm(prompt)
+    res = query_llm(prompt)
+
+    if isinstance(res, str):
+        return res
+
+    if isinstance(res, dict):
+        try:
+            return res["choices"][0]["message"]["content"]
+        except:
+            return str(res)
+
+    return "Evaluation failed"
 
 
 def start_session(duration):
