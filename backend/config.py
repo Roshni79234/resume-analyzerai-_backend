@@ -1,9 +1,12 @@
 import os
 
-HF_TOKEN = os.environ.get("HF_TOKEN")
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 
-HF_MODEL = "HuggingFaceH4/zephyr-7b-beta"
+GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
+
+MODEL = "llama3-8b-8192"
 
 HEADERS = {
-    "Authorization": f"Bearer {HF_TOKEN}"
+    "Authorization": f"Bearer {GROQ_API_KEY}",
+    "Content-Type": "application/json"
 }

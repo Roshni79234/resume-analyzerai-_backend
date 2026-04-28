@@ -1,5 +1,41 @@
 {
-  "Software Engineer": "Java Python DSA APIs OOP",
-  "Data Scientist": "Python Machine Learning NLP Statistics",
-  "Web Developer": "HTML CSS JavaScript React"
+  "Software Engineer": "Design, develop, and maintain scalable software applications. Strong knowledge of data structures, algorithms, and system design required. Experience with Python/Java/C++ preferred.",
+  
+  "Frontend Developer": "Build responsive and interactive web interfaces using HTML, CSS, JavaScript, and frameworks like React or Angular. Focus on UI/UX and performance optimization.",
+  
+  "Backend Developer": "Develop server-side logic, APIs, and database systems. Experience with Flask, Django, Node.js, REST APIs, and SQL/NoSQL databases.",
+  
+  "Full Stack Developer": "Work on both frontend and backend systems. Must be skilled in MERN/MEAN stack or similar technologies. Handle end-to-end application development.",
+  
+  "Data Scientist": "Analyze large datasets to extract insights. Strong knowledge of Python, machine learning, statistics, and data visualization tools like Pandas and Matplotlib.",
+  
+  "Machine Learning Engineer": "Design and deploy ML models. Knowledge of supervised/unsupervised learning, deep learning, TensorFlow/PyTorch, and model optimization.",
+  
+  "AI Engineer": "Develop AI-powered applications using NLP, computer vision, and generative models. Experience with LLMs and APIs is preferred.",
+  
+  "DevOps Engineer": "Manage CI/CD pipelines, cloud infrastructure, and deployment automation. Experience with Docker, Kubernetes, AWS, and Linux systems.",
+  
+  "Cloud Engineer": "Design and maintain cloud infrastructure on AWS/Azure/GCP. Focus on scalability, security, and cost optimization.",
+  
+  "Cybersecurity Analyst": "Protect systems from cyber threats. Knowledge of network security, encryption, ethical hacking, and vulnerability assessment.",
+  
+  "Database Administrator": "Manage and optimize databases. Expertise in SQL, indexing, performance tuning, backup, and recovery strategies.",
+  
+  "Mobile App Developer": "Develop Android/iOS applications using Flutter, React Native, or native technologies like Kotlin and Swift.",
+  
+  "UI/UX Designer": "Design user-friendly interfaces and experiences. Strong skills in wireframing, prototyping, Figma, and design systems.",
+  
+  "Product Manager": "Define product vision, roadmap, and features. Coordinate between technical and business teams to deliver software products.",
+  
+  "Business Analyst": "Analyze business requirements and translate them into technical solutions. Strong communication and documentation skills required.",
+  
+  "System Engineer": "Maintain and troubleshoot IT systems, servers, and infrastructure. Ensure reliability and performance of systems.",
+  
+  "Network Engineer": "Design and manage computer networks, routing, switching, and network security protocols.",
+  
+  "AI Researcher": "Conduct advanced research in artificial intelligence, deep learning, and NLP. Focus on innovation and experimentation.",
+  
+  "QA Engineer": "Test software applications for bugs and performance issues. Knowledge of manual and automated testing tools required.",
+  
+  "Software Tester": "Execute test cases, report bugs, and ensure software quality before deployment."
 }
