@@ -1,8 +1,8 @@
 import os
 import json
 from flask import Flask, request, jsonify
-from flask import Flask
 from flask_cors import CORS
+
 
 app = Flask(__name__)
 CORS(app)
@@ -16,24 +16,19 @@ from services.interview import (
     evaluate_answer
 )
 
-app = Flask(__name__)
-
 # Load roles
 with open("data/job_roles.json") as f:
     roles_data = json.load(f)
 
 sessions = {}
 
-
 @app.route("/")
 def home():
     return "Backend running"
 
-
 @app.route("/roles")
 def roles():
     return jsonify(list(roles_data.keys()))
-
 
 @app.route("/analyze", methods=["POST"])
 def analyze():
@@ -46,14 +41,12 @@ def analyze():
         return jsonify({"error": "Invalid role"}), 400
 
     jd = roles_data[role]
-
     score = analyze_resume(resume, jd)
 
     return jsonify({
         "score": score,
         "suggestions": f"Improve skills relevant to {role}"
     })
-
 
 @app.route("/start", methods=["POST"])
 def start():
@@ -76,7 +69,6 @@ def start():
 
     return jsonify({"question": q})
 
-
 @app.route("/next", methods=["POST"])
 def next_q():
     data = request.json or {}
@@ -96,7 +88,6 @@ def next_q():
 
     eval_text = evaluate_answer(last_q, answer, session["role"])
 
-    # safer scoring parse
     score = 5
     try:
         if "Score:" in eval_text:
@@ -117,7 +108,6 @@ def next_q():
         "score": score
     })
 
-
 @app.route("/end", methods=["POST"])
 def end():
     data = request.json or {}
@@ -127,7 +117,6 @@ def end():
         return jsonify({"error": "Session not found"}), 400
 
     return jsonify(end_session(sessions[user]))
-
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
