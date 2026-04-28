@@ -35,3 +35,5 @@ def query_llm(prompt):
 
     except requests.exceptions.RequestException as e:
         return {"error": str(e)}
+    
+print("API KEY:", GROQ_API_KEY)

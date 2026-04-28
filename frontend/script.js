@@ -1,4 +1,4 @@
-const API = "https://resume-analyzerai-backend.onrender.com"; // 🔥 CHANGE THIS
+const API = "https://resume-analyzerai-backend-1.onrender.com"; // 🔥 CHANGE THIS
 
 let user_id = "user123";
 
