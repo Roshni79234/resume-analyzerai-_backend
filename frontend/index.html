@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Interview System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>AI Interview System</h1>
+
+  <!-- Role Dropdown -->
+  <select id="role"></select>
+
+  <!-- Resume Analyzer -->
+  <h2>Resume Analyzer</h2>
+  <textarea id="resume" placeholder="Paste your resume here..." rows="6"></textarea>
+  <button onclick="analyzeResume()">Analyze Resume</button>
+  <div id="analysisResult"></div>
+
+  <hr>
+
+  <!-- Interview Section -->
+  <h2>Interview</h2>
+  <button onclick="startInterview()">Start Interview</button>
+
+  <div id="chat"></div>
+
+  <input type="text" id="answer" placeholder="Type your answer...">
+  <button onclick="sendAnswer()">Submit</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

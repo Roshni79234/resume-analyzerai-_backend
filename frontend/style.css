@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 450px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+select, input, textarea {
+  width: 95%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #5a67d8;
+}
+
+#chat {
+  height: 200px;
+  overflow-y: auto;
+  text-align: left;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+#analysisResult {
+  text-align: left;
+  margin-top: 10px;
+}
+
+hr {
+  margin: 15px 0;
+}
