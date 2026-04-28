@@ -1,5 +1,5 @@
 import time
-from services.hf_api import query_llm
+from services.groqapi import query_llm
 
 
 def generate_question(role, history):
