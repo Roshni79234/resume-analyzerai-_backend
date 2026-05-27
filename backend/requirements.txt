@@ -3,12 +3,7 @@ requests
 scikit-learn
 flask-cors
 gunicorn
-Flask-SQLAlchemy
-Flask-JWT-Extended
+flask-sqlalchemy
+flask-jwt-extended
 Flask-Bcrypt
-typer==0.24.2
-typing_extensions==4.15.0
-urllib3==2.6.3
-Werkzeug==3.1.6
-wheel==0.46.3
-wrapt==2.1.1
+psycopg2-binary
